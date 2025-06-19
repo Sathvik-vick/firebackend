@@ -63,6 +63,7 @@ app.use(cors({
     origin: [
         'http://localhost:80',
         'http://localhost:3000',
+        'https://dimgrey-crane-951410.hostingersite.com',
         'https://sparkshield1.onrender.com',
         'https://sparkshieldenterprises.xyz',
         'https://www.sparkshieldenterprises.xyz'
