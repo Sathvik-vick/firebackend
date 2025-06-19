@@ -60,18 +60,8 @@ const db = admin.database();
 // Middleware
 
 app.use(cors({
-    origin: [
-        'http://localhost:80',
-        'http://localhost:3000',
-        'https://dimgrey-crane-951410.hostingersite.com',
-        'https://sparkshield1.onrender.com',
-        'https://sparkshieldenterprises.xyz',
-        'https://www.sparkshieldenterprises.xyz'
-    ],
-    methods: ['GET', 'POST', 'OPTIONS'],
-    credentials: true,
-    optionsSuccessStatus: 200,
-    allowedHeaders: ['Content-Type', 'Authorization']
+    origin: process.env.FRONTEND_URL,
+    credentials: true
 }));
 
 app.options('*', cors()); // Enable preflight for all routes
